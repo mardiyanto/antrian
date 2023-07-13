@@ -2,11 +2,11 @@
 
 if (preg_match ('/config.php/', basename($_SERVER['PHP_SELF']))) die ('Unable to access this script directly from browser!');
 
-define ("DB_HOST","171.16.3.6");
-define ("DB_USER","aka");
-define ("DB_PASS","m4rd1");
-define ("DB_NAME","sik");
-define ("URL","http://localhost/antrian");
+define ("DB_HOST","localhost");
+define ("DB_USER","root");
+define ("DB_PASS","");
+define ("DB_NAME","db_antrian");
+define ("URL","http://localhost/antrian_mod");
 
 define('BpjsApiUrl', 'https://new-api.bpjs-kesehatan.go.id:8080/new-vclaim-rest/');
 define('ConsID', '');

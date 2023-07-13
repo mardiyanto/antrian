@@ -91,21 +91,9 @@ include ('config.php');
     <div class="row">
     <div class="col-12 d-flex flex-column justify-content-end pl-2 pr-2 pb-0 mt-3">
       <div class="card-title bg-primary text-white p-2" style="font-size:36px;"><marquee>
-        <?php
-        $jadwal = query("SELECT
-            dokter.nm_dokter,
-            poliklinik.nm_poli,
-            DATE_FORMAT(jadwal.jam_mulai, '%H:%i') AS jam_mulai,
-            DATE_FORMAT(jadwal.jam_selesai, '%H:%i') AS jam_selesai
-        FROM jadwal
-        INNER JOIN dokter
-        INNER JOIN poliklinik on dokter.kd_dokter=jadwal.kd_dokter
-        AND jadwal.kd_poli=poliklinik.kd_poli
-        WHERE jadwal.hari_kerja='$namahari'");
-        while ($row = fetch_array($jadwal)) {
-          echo '<i class="fas fa-user-md"></i> '.$row['0'].' - '.$row['1'].' - '.$row['2'].' s/d '.$row['3'].' WIB &nbsp;&nbsp;&nbsp; ';
-        }
-        ?>
+
+     <i class="fas fa-user-md"></i> SISTEM ANTRIAN FTPL
+
       </marquee></div>
     </div>
     </div>
